@@ -1,0 +1,8 @@
+<script>
+function lettersOnly(input) {
+    var regex = /[^a-z]/gi;
+    input.value = input.value.replace(regex, "");
+}
+</script>
+<input id="firstname" placeholder="first name" onkeyup="lettersOnly(this)">
+<input id="lastname" placeholder="last name" onkeyup="lettersOnly(this)">
