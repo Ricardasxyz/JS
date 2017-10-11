@@ -1,0 +1,19 @@
+<script type="text/javascript">
+		var arr = [];
+		var input = prompt("Tell me A Name");
+
+		while(input != ""){
+			arr.push(input);
+			input = prompt("Tell me The Name");
+			
+
+			if(input == ""){
+				arr.sort();
+				arr.reverse();
+				document.write("<p>"+arr+"</p>");
+				break;
+			}
+		}
+
+
+		</script>
