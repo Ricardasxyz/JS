@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		var pagesVisited = new Array();
+		function returnPagesVisited(){
+			var returnValue = "So far you have visited pages\n";
+			var pageVisitedIndex;
+			var numberOfPagesVisited = pagesVisited.length;
+			for(pageVisitedIndex = 0; pageVisitedIndex < numberOfPagesVisited;pageVisitedIndex++){
+				returnValue = returnValue + pagesVisited[pageVisitedIndex] + "\n"
+			}
+			return returnValue;
+		}
+
+		function addPage(fileName){
+			var fileNameStart = fileName.lastIndexOf("/") + 1;
+			fileName = fileName.substr(fileNameStart);
+			pagesVisited[pagesVisited.length] = fileName;
+
+			return true;
+		}
+
+
+	</script>
+</head>
+	<frameset cols="50%, *">
+		<frame name="frameLeft" src="2.html"></frame>
+		<frame name="frameRight" src="3.html"></frame>
+	</frameset>
+</html>
