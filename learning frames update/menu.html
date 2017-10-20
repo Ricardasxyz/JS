@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		function choosePage_onchange(){
+			var choosePage = document.form1.choosePage;
+			var windowobject;
+			if(document.form1.radFrame[0].checked == true){
+				windowobject = window.parent.frameMain.frameTop;
+			}
+			else {
+				windowobject = window.parent.frameMain.frameBottom;
+			}
+			windowobject.location.href = choosePage.options[choosePage.selectedIndex].value;
+			return true;
+		}
+	</script>
+</head>
+<body>
+<form name="form1" action="">
+	Select frame
+	</br>
+	Top
+	<input name="radFrame" checked="checked" type="radio"/>
+	Bottom
+	<input type="radio" name="radFrame"/>
+	<br/>
+	<br/>
+	<select name="choosePage" onchange="choosePage_onchange()">
+		<option value="2.html">Page 2</option>
+		<option value="3.html">Page 3</option>
+		<option value="4.html">Page 4</option>
+		<option value="5.html">Page 5</option>
+	</select>
+</form>
+</body>
+</html>
